@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
+import { AboutUs, Chef, Findus, Footer, Gallery, Header, Intro, Laurels, SpecialMenu, FullMenu } from './container';
+import { Navbar } from './components';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// const App = () => (
+//   <Router>
+//   <div>
+//     <Navbar />
+//     <Header />
+//     <AboutUs />
+//     {/* <SpecialMenu /> */}
+//     <Route path="/SpecialMenu" exact component={SpecialMenu} />
+//     <Chef />
+//     <Intro />
+//     <Laurels />
+//     <Gallery />
+//     <Findus />
+//     <Footer />
+//     <Route path="/full-menu" exact component={FullMenu} />
+//   </div>
+//   </Router>
+// );
+
+const App = () => (
+  <Router>
+    <div>
+      <Navbar />
+      <Header />
+      <AboutUs />
+      <Routes>
+        <Route path="/" element={<SpecialMenu />} />
+        <Route path="/full-menu" element={<FullMenu />} />
+      </Routes>
+      <Chef />
+      <Intro />
+      <Laurels />
+      <Gallery />
+      <Findus />
+      <Footer />
     </div>
-  );
-}
+  </Router>
+);
 
 export default App;

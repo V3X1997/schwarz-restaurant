@@ -1,0 +1,16 @@
+
+.social-media_list{
+    color: white;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+ol li:nth-of-type(1) {
+    list-style-image: url('../../assets/insta.svg') ;
+}
+ol li:nth-of-type(2) {
+    list-style-image: url('../../assets/face.svg') ;
+}
+ol li:nth-of-type(3) {
+    list-style-image: url('../../assets/wa.svg') ;
+}
